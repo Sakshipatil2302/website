@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>यशश्री गृह उद्योग</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header bg-light py-3 shadow-sm sticky-top">
+    <div class="container d-flex align-items-center justify-content-between flex-wrap">
+      <a href="#" class="logo text-decoration-none d-flex align-items-center" onclick="animateTitle()">
+      <i class="fa-solid fa-basket-shopping me-2 text-primary fs-3"></i>
+      <span id="logoTitle" class="fs-2 fw-bold gradient-text">यशश्री</span>
+    </a>
+     <!-- Nav Section -->
+    <nav class="navbar d-none d-md-flex gap-4">
+        <a href="#About" class="nav-link custom-nav-link">About</a>
+        <a href="#products" class="nav-link custom-nav-link">Products</a>
+        <a href="#features" class="nav-link custom-nav-link">Features</a>
+        <a href="#review" class="nav-link custom-nav-link">Review</a>
+    </nav>
+
+      <div class="icons d-flex align-items-center gap-3 position-relative">
+        <button id="menu-btn" class="btn btn-link text-dark d-md-none">
+        <i class="fa fa-bars fa-lg"></i>
+        </button>
+        <button id="search-btn" class="btn btn-link text-dark">
+        <i class="fa fa-search fa-lg"></i>
+        </button>
+        <input
+        type="text"
+        id="search-box"
+        class="form-control position-absolute top-100 mt-2 d-none"
+        placeholder="Search..."
+        style="width: 200px; z-index: 1000;"
+        />
+        <div class="icons d-flex align-items-center gap-3">
+            <button id="login-btn" class="btn btn-link text-dark">
+            <i class="fa fa-user fa-lg"></i>
+            </button>
+            <div class="icons d-flex align-items-center gap-3 position-relative">
+  <button id="menu-btn" class="btn btn-link text-dark d-md-none">
+    <i class="fa fa-bars fa-lg"></i>
+  </button>
+ 
+  
+  
+
+  <!-- Add user popup here -->
+  <div id="user-popup" class="position-absolute bg-white border rounded shadow p-3 d-none" 
+       style="width: 300px; top: 50px; right: 0; z-index: 1050;">
+    <div class="d-flex align-items-center gap-3 mb-3">
+    <img 
+        src="C:\Users\shubh\Documents\kakiVS\image\k.JPG" 
+        alt="User Photo" 
+        class="rounded-circle" 
+        style="width: 50px; height: 50px; object-fit: cover;"
+    />
+      <div>
+        <strong>Sushama Patil</strong><br />
+        <small>sushamapatil10786@gmail.com</small>
+      </div>
+    </div>
+    <button class="btn btn-primary w-100 mb-2">Profile</button>
+   
+  </div>
+</div>
+
+        </div>
+
+        
+      </div>
+      <div id="search-container" class="d-none position-relative">
+  <input
+    id="search-box"
+    type="text"
+    class="form-control"
+    placeholder="Search..."
+    autocomplete="off"
+  />
+  <button id="search-close-btn" class="btn btn-sm btn-danger position-absolute top-50 end-0 translate-middle-y me-1" style="z-index: 10;">&times;</button>
+</div>
+
+
+    </div>
+    <form
+      class="search-form container mt-3 d-none"
+      id="search-form"
+      role="search"
+      autocomplete="off"
+    >
+      <div class="input-group">
+        <input
+          type="search"
+          id="search-box"
+          class="form-control"
+          placeholder="Search Here..."
+          aria-label="Search Here"
+        />
+        <button class="btn btn-outline-secondary" type="submit" aria-label="Search">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </form>
+  </header>
+
+  <!-- Products Section -->
+  <section id="products" class="products py-5 bg-white">
+    <div class="container">
+      <h1 class="mb-5 text-center fw-bold">Products</h1>
+      <div class="row g-4">
+        <article class="product col-sm-6 col-md-4 col-lg-3 text-center">
+          <img
+            src="image\kandi.jpg"
+            alt="Awala Kandi"
+            class="img-fluid rounded shadow-sm mb-3"
+            loading="lazy"
+          />
+          <h3 class="fw-semibold">Awala Kandi</h3>
+          <p class="text-muted">
+            A dish or preparation using amla, often cooked with spices for its digestive properties.
+          </p>
+        </article>
+          <article class="product col-sm-6 col-md-4 col-lg-3 text-center">
+          <img
+            src="image\Lanache.jpg"
+            alt="Awala Lanache"
+            class="img-fluid rounded shadow-sm mb-3"
+            loading="lazy"
+          />
+          <h3 class="fw-semibold">Awala Lanache(आवला लोणचे)</h3>
+          <p class="text-muted">
+            A traditional amla preparation preserved with salt or spices, often used as a condiment.
+          </p>
+        </article>
+        <article class="product col-sm-6 col-md-4 col-lg-3 text-center">
+          <img
+            src="image\Serup.jpg"
+            alt="Awala Serup"
+            class="img-fluid rounded shadow-sm mb-3"
+            loading="lazy"
+          />
+          <h3 class="fw-semibold">Awala Serup</h3>
+          <p class="text-muted">
+            A syrup made from amla juice, known for boosting immunity and improving skin health.
+          </p>
+        </article>
+        
+        <article class="product col-sm-6 col-md-4 col-lg-3 text-center">
+          <img
+            src="image\Murabba.jpg"
+            alt="Awala Murabba"
+            class="img-fluid rounded shadow-sm mb-3"
+            loading="lazy"
+          />
+          <h3 class="fw-semibold">Awala Murabba
+            (आवळा मुराबा)
+          </h3>
+          <p class="text-muted">
+            A sweet preserve made from Indian gooseberries (Amla) soaked in sugar syrup,
+            used for health benefits.
+          </p>
+        </article>
+
+        <article class="product col-sm-6 col-md-4 col-lg-3 text-center mx-auto mx-lg-0">
+          <img
+            src="image\Oil.jpg"
+            alt="Awala Oil"
+            class="img-fluid rounded shadow-sm mb-3"
+            loading="lazy"
+          />
+          <h3 class="fw-semibold">Awala Oil(आवळा तेल)</h3>
+          <p class="text-muted">
+            Promoting hair growth, strengthening hair, and improving scalp health.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+<!-- Poster Section Start -->
+<section id="posters" class="poster-section">
+  <h2> खास पोस्टर</h2>
+  <div class="poster-gallery">
+    <div class="poster-box">
+      <img src="image\WhatsApp Image 2025-01-05 at 13.39.50_2cb3ce29.jpg" alt="उपवासासाठी पदार्थांचे पोस्टर 1">
+    </div>
+    <div class="poster-box">
+      <img src="image\WhatsApp Image 2025-01-05 at 13.39.51_e748077d.jpg" alt="उपवासासाठी पदार्थांचे पोस्टर 2">
+    </div>
+    <div class="poster-box">
+      <img src="image\WhatsApp Image 2025-01-05 at 13.39.51_d9af5309.jpg" alt="उपवासासाठी पदार्थांचे पोस्टर 3">
+    </div>
+    <div class="poster-box">
+      <img src="image\WhatsApp Image 2025-01-05 at 13.39.51_74e53e0b.jpg" alt="उपवासासाठी पदार्थांचे पोस्टर 1">
+    </div>
+    <div class="poster-box">
+      <img src="image\WhatsApp Image 2025-01-05 at 13.39.52_0ff6a15c.jpg" alt="उपवासासाठी पदार्थांचे पोस्टर 2">
+    </div>
+    <div class="poster-box">
+      <img src="image\WhatsApp Image 2025-01-05 at 13.41.15_839307c1.jpg" alt="उपवासासाठी पदार्थांचे पोस्टर 3">
+    </div>
+  </div>
+</section>
+<!-- Poster Section End -->
+
+  <!-- Gallery Section -->
+  <section class="gallery py-5 bg-light">
+    <div class="container">
+      <h1 class="mb-5 text-center fw-bold">Our Product Gallery</h1>
+      <div class="row g-3 justify-content-center">
+        <figure class="image-item col-6 col-md-3 text-center">
+          <img
+            src="image\WhatsApp Image 2025-01-05 at 13.45.56_3b2fec58.jpg"
+            alt="तुपातील रव्याचे लाडू"
+            class="img-fluid rounded shadow-sm"
+            loading="lazy"
+          />
+          <figcaption class="mt-2 fw-semibold">तुपातील रव्याचे लाडू</figcaption>
+        </figure>
+
+        <figure class="image-item col-6 col-md-3 text-center">
+          <img
+            src="image\WhatsApp Image 2025-01-05 at 13.45.56_e7256ee6.jpg"
+            alt="बेसनाचे लाडू"
+            class="img-fluid rounded shadow-sm"
+            loading="lazy"
+          />
+          <figcaption class="mt-2 fw-semibold">बेसनाचे लाडू</figcaption>
+        </figure>
+
+        <figure class="image-item col-6 col-md-3 text-center">
+          <img
+            src="image\WhatsApp Image 2025-01-05 at 13.45.58_13df28fd.jpg"
+            alt="भडंग"
+            class="img-fluid rounded shadow-sm"
+            loading="lazy"
+          />
+          <figcaption class="mt-2 fw-semibold">भडंग</figcaption>
+        </figure>
+
+        <figure class="image-item col-6 col-md-3 text-center">
+          <img
+            src="image\WhatsApp Image 2025-01-05 at 13.46.05_4042402b.jpg"
+            alt="बटाटा चिप्स"
+            class="img-fluid rounded shadow-sm"
+            loading="lazy"
+          />
+          <figcaption class="mt-2 fw-semibold">बटाटा चिप्स</figcaption>
+        </figure>
+
+        <figure class="image-item col-6 col-md-3 text-center">
+          <img
+            src="image\WhatsApp Image 2025-01-05 at 13.46.04_5686fc0c.jpg"
+            alt="ड्रायफ्रूट्स काजू बदाम"
+            class="img-fluid rounded shadow-sm"
+            loading="lazy"
+          />
+          <figcaption class="mt-2 fw-semibold">ड्रायफ्रूट्स काजू बदाम</figcaption>
+        </figure>
+
+        <figure class="image-item col-6 col-md-3 text-center">
+          <img
+            src="image\WhatsApp Image 2025-01-05 at 13.46.00_3a1c7668.jpg"
+            alt="गुळातली सजुरी"
+            class="img-fluid rounded shadow-sm"
+            loading="lazy"
+          />
+          <figcaption class="mt-2 fw-semibold">गुळातली सजुरी</figcaption>
+        </figure>
+        <figure class="image-item col-6 col-md-3 text-center">
+          <img
+            src="image\WhatsApp Image 2025-01-05 at 13.46.00_c7dba693.jpg"
+            alt="बुद्धीचे लाडू"
+            class="img-fluid rounded shadow-sm"
+            loading="lazy"
+          />
+          <figcaption class="mt-2 fw-semibold">बुद्धीचे लाडू</figcaption>
+        </figure>
+        
+        <figure class="image-item col-6 col-md-3 text-center">
+          <img
+            src="image\WhatsApp Image 2025-01-05 at 13.46.13_57151df6.jpg"
+            alt="साबुदाणा कुरडी"
+            class="img-fluid rounded shadow-sm"
+            loading="lazy"
+          />
+          <figcaption class="mt-2 fw-semibold">साबुदाणा कुरडी</figcaption>
+        </figure>
+
+        <figure class="image-item col-6 col-md-3 text-center">
+          <img
+            src="image\WhatsApp Image 2025-01-05 at 13.46.02_f2aa9a51.jpg"
+            alt="उडदाचे पापड"
+            class="img-fluid rounded shadow-sm"
+            loading="lazy"
+          />
+          <figcaption class="mt-2 fw-semibold">उडदाचे पापड</figcaption>
+        </figure>
+
+         <figure class="image-item col-6 col-md-3 text-center">
+          <img
+            src="image\WhatsApp Image 2025-01-05 at 13.45.56_e8539723.jpg"
+            alt="घरगुती तूप"
+            class="img-fluid rounded shadow-sm"
+            loading="lazy"
+          />
+          <figcaption class="mt-2 fw-semibold">घरगुती तूप</figcaption>
+        </figure>
+
+        
+      
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features py-5">
+    <div class="container">
+      <h1 class="mb-5 text-center fw-bold">Features</h1>
+      <div class="row g-4">
+        <article class="feature-item col-md-6 col-lg-4 border rounded p-4 shadow-sm h-100">
+          <h5>व्हिटॅमिन C ने भरपूर <small class="text-muted">(Rich in Vitamin C)</small></h5>
+          <p class="mb-0">
+            आवळा उत्पादने व्हिटॅमिन सीने समृद्ध असतात, जी रोगप्रतिकारक शक्ती आणि एकूण आरोग्य वाढविण्यास मदत करते।
+          </p>
+        </article>
+        <article class="feature-item col-md-6 col-lg-4 border rounded p-4 shadow-sm h-100">
+          <h5>पचनक्रिया सुधारते <small class="text-muted">(Improves Digestion)</small></h5>
+          <p class="mb-0">आवळा पचन सुधारण्यास मदत करतो आणि शरीराला विषमुक्त करतो.</p>
+        </article>
+        <article class="feature-item col-md-6 col-lg-4 border rounded p-4 shadow-sm h-100">
+          <h5>त्वचा आणि केसांसाठी उपयुक्त <small class="text-muted">(Beneficial for Skin and Hair)</small></h5>
+          <p class="mb-0">आवळा त्वचेला पोषण देतो आणि केसांच्या वाढीस चालना देतो, ज्यामुळे तो सौंदर्य उत्पादनांमध्ये एक लोकप्रिय घटक बनतो.</p>
+        </article>
+        <article class="feature-item col-md-6 col-lg-4 border rounded p-4 shadow-sm h-100">
+          <h5>प्राकृतिक अँटीऑक्सीडंट्स <small class="text-muted">(Natural Antioxidants)</small></h5>
+          <p class="mb-0">आवळ्यामध्ये शक्तिशाली अँटीऑक्सिडंट्स असतात जे शरीराला मुक्त रॅडिकल्सपासून संरक्षण करण्यास मदत करतात.</p>
+        </article>
+        <article class="feature-item col-md-6 col-lg-4 border rounded p-4 shadow-sm h-100">
+          <h5>रक्तदाब नियंत्रण <small class="text-muted">(Helps Control Blood Pressure)</small></h5>
+          <p class="mb-0">आवळ्याचे नियमित सेवन केल्याने रक्तदाबाची पातळी निरोगी राहण्यास मदत होते असे मानले जाते.</p>
+        </article>
+        <article class="feature-item col-md-6 col-lg-4 border rounded p-4 shadow-sm h-100">
+          <h5>कुलस्ट्रॉल कमी करण्यास मदत करते <small class="text-muted">(Helps Lower Cholesterol)</small></h5>
+          <p class="mb-0">आवळा खराब कोलेस्ट्रॉल कमी करण्यास आणि हृदयाचे आरोग्य सुधारण्यास मदत करतो.</p>
+        </article>
+        <article class="feature-item col-md-6 col-lg-4 border rounded p-4 shadow-sm h-100">
+          <h5>वजन कमी करण्यास मदत करते <small class="text-muted">(Aids in Weight Loss)</small></h5>
+          <p class="mb-0">आवळा चयापचय वाढवून वजन व्यवस्थापनात मदत करू शकतो.</p>
+        </article>
+        <article class="feature-item col-md-6 col-lg-4 border rounded p-4 shadow-sm h-100">
+          <h5>प्रतिरोधक क्षमता वाढवते <small class="text-muted">(Boosts Immunity)</small></h5>
+          <p class="mb-0">आवळा रोगप्रतिकारक शक्ती मजबूत करतो, ज्यामुळे शरीर संक्रमणांना अधिक प्रतिरोधक बनते.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Review Section -->
+  <section id="review" class="review py-5 bg-light">
+    <div class="container">
+      <h1 class="mb-5 text-center fw-bold">Review</h1>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-3">
+          <img
+            src="image\WhatsApp Image 2025-01-05 at 18.40.01_636d8269.jpg"
+            alt="Review 1"
+            class="img-fluid rounded shadow-sm"
+            loading="lazy"
+          />
+        </div>
+          <div class="col-6 col-md-4 col-lg-3">
+          <img
+            src="image\WhatsApp Image 2025-01-05 at 18.41.35_8f6b50bb.jpg"
+            alt="Review 3"
+            class="img-fluid rounded shadow-sm"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img
+            src="image\WhatsApp Image 2025-01-05 at 18.42.50_f9daac79.jpg"
+            alt="Review 4"
+            class="img-fluid rounded shadow-sm"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img
+            src="image\WhatsApp Image 2025-01-05 at 18.40.39_d6e98053.jpg"
+            alt="Review 2"
+            class="img-fluid rounded shadow-sm"
+            loading="lazy"
+          />
+        </div>
+       
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+<footer id="About" class="footer bg-dark text-light py-4">
+  <div class="container d-flex flex-wrap justify-content-between gap-3">
+    <!-- Company Name -->
+    <div class="footer-section mb-3 flex-fill">
+      <h3 class="fw-bold fs-4 text-white bg-secondary px-3 py-2 rounded">यशश्री गृह उद्योग</h3>
+      <p class="mb-0 mt-2">© 2025 यशश्री गृह उद्योग.<br />All rights reserved.</p>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="footer-section mb-3 flex-fill">
+      <h3 class="fw-bold fs-4 text-white bg-secondary px-3 py-2 rounded">Contact Us</h3>
+      <p class="mb-1 mt-2">Phone: 8830226983 / 9529382878</p>
+      <p>
+        Email:
+        <a
+          href="mailto:sushamapatil10786@gmail.com"
+          class="text-light text-decoration-underline"
+        >
+          sushamapatil10786@gmail.com
+        </a>
+      </p>
+    </div>
+
+    <!-- Address -->
+    <div class="footer-section mb-3 flex-fill">
+      <h3 class="fw-bold fs-4 text-white bg-secondary px-3 py-2 rounded">Address</h3>
+      <p class="mb-1 mt-2">Budhgaon-Madhavnagar Road, in front of HP Petrol Pump</p>
+      <p>बुधगाव सांगली रोड, गजानन पेट्रोल पंप समोर, यशश्री गृह उद्योग शॉप, बुधगाव</p>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-section mb-3 flex-fill">
+      <h3 class="fw-bold fs-4 text-white bg-secondary px-3 py-2 rounded">Services</h3>
+      <p class="mt-2">Courier Service Available</p>
+      <p>Online Payment Available</p>
+    </div>
+  </div>
+</footer>
+
+
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+  ></script>
+</body>
+</html>
