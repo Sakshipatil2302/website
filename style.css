@@ -1,0 +1,430 @@
+:root {
+    --green: green;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+    --border: 2rem solid rgba(0, 0, 0, 0.1);
+    --outline: .1rem solid rgba(0, 0, 0, 0.1);
+}
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css');
+
+.gradient-text {
+    background: linear-gradient(45deg, #ff4e50, #f9d423);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    transition: alltransform  0.3s ease;
+  }
+ .custom-nav-link {
+    color: #333;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+    padding: 0 2px;
+    border-radius: 4px;
+  }
+  #search-container {
+  width: 250px; /* adjust as needed */
+}
+
+  .custom-nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff4e50, #f9d423);
+    transition: width 0.3s ease;
+  }
+
+  .custom-nav-link:hover {
+    color: #ff4e50;
+  }
+
+  .custom-nav-link:hover::after {
+    width: 100%;
+  }
+  .logo:hover .gradient-text {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+
+  .logo i {
+    transition: transform 0.3s ease;
+  }
+
+  .logo:hover i {
+    transform: rotate(-10deg) scale(1.1);}
+     /* Click animation class */
+  .click-zoom {
+    transform: scale(1.4);
+  }
+/* General Reset */
+* {
+    font-family: "Poppins", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+.poster-section {
+  padding: 40px 20px;
+  background-color: #fff8f0;
+  text-align: center;
+}
+
+.poster-section h2 {
+  font-size: 28px;
+  color: #d62828;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.poster-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.poster-box img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Basic HTML settings */
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+/* Body styling */
+body {
+    background: #eee;
+}
+section{
+padding: 2rem 9%;
+}
+/* Header styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding: 2rem 9%;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    width: 100%;
+}
+/* Logo styling */
+.header .logo {
+    font-size: 3.5rem;
+    font-weight: bolder;
+    color: var(--green);
+    flex-shrink: 0;
+}
+/* Navbar links styling */
+.header .navbar a {
+    font-size: 2.5rem;
+    margin: 0 1rem;
+    color: var(--black);
+    transition: color 0.3s ease-in-out;
+}
+/* Navbar links styling */
+.header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* Allows navbar to take up the remaining space */
+}
+/* Hover effect for links */
+.header .navbar a:hover {
+    color: var(--green); /* Changes the text color when hovered */
+}
+
+.header .search-form{
+    border: 1px solid;
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    max-width: 50rem;
+    height: 5rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+.header .search-form.active{
+    right: 2rem;
+    transition: 0.1s linear;
+}
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+.header .search-form label{
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+.header .search-form label:hover{
+    color: var(--green);
+}
+.content{
+    text-align: center
+}
+.review-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--black);
+    color: white; 
+    font-size: medium;
+}
+
+.products {
+    margin: 7rem 5%;
+}
+
+.product-container {
+    display: grid;
+    gap: 2rem;
+    justify-content: space-around;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns, equal width */
+    gap: 10px; /* Space between images */
+}
+
+
+.product {
+    font-size: 2rem;
+    text-align: center;
+    max-width: 300px;
+}
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+h1{
+    text-align: center;
+    font-size: 5rem;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    color: var(--black);
+    background: var(--green);
+    color: #fff;
+    display: inline-block;
+        padding: 0.5rem 3rem;
+    clip-path: polygon(100% 0%, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+
+
+}
+
+/* Styling for the main container */
+.amla-products-features {
+    font-family: "Poppins" sans-serif; /* Set a clean font */
+    line-height: 1.6; /* Increase line height for readability */
+    color: #333; /* Set text color */
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px; /* Set max width */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Styling for each feature item */
+.amla-products-features .feature-item {
+    margin-bottom: 15px; /* Add space between items */
+    font-size: 2rem; /* Set font size */
+}
+
+/* Styling for Marathi text */
+.amla-products-features .marathi-text {
+    font-weight: bold;
+    color: #2c3e50; /* Dark color for Marathi text */
+    margin-right: 10px; /* Space between Marathi and English */
+}
+
+/* Styling for English text */
+.amla-products-features .english-text {
+    font-style: italic;
+    color: #34495e; /* Softer color for English text */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .amla-products-features {
+        padding: 15px; /* Less padding on smaller screens */
+    }
+
+    .amla-products-features .feature-item {
+        font-size: 0.9rem; /* Slightly smaller font size on smaller screens */
+    }
+}
+
+/* Container that holds all images */
+.image-container {
+    display: flex;                     /* Use Flexbox for layout */
+    flex-wrap: wrap;                   /* Allow items to wrap when space is insufficient */
+    justify-content: space-between;    /* Evenly space out the images */
+    gap: 10px;                         /* Add space between images */
+    margin: 20px 0;                    /* Optional margin around container */
+}
+
+/* Styling for the images */
+.image-container img {
+    max-width: 50%;
+    height: 300px;
+    border-radius: 10px;               /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow to images */
+}
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .image-container img {
+        width: 45%;  /* Images take up 45% of the container on smaller screens */
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .image-container img {
+        width: 90%;  /* Images take up 90% of the container on very small screens */
+    }
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center; /* Center everything on the body */
+  }
+  
+  /* Gallery container to hold all images */
+  .gallery-container {
+    display: flex;
+    justify-content: center; /* Align items horizontally in the center */
+    flex-wrap: wrap; /* Allow images to wrap on small screens */
+    gap: 20px; /* Space between the images */
+    padding: 20px;
+  }
+  
+  /* Each image item (image + text) */
+  .image-item {
+    text-align: center; /* Center the text below the image */
+    width: 220px; /* Set a fixed width for each image block */
+  }
+  
+  /* Style the image */
+  .image {
+    width: 100%; /* Make the image fill the width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: round the corners */
+  }
+  
+  /* Style the image name */
+  .image-name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 10px; /* Space between the image and the name */
+    color: #333; /* Set text color */
+  }
+  
+.owner-info {
+  padding: 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.owner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.owner-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ddd;
+}
+
+.owner-details {
+  max-width: 600px;
+  text-align: left;
+}
+.footer {
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-section h3, .footer-section h4 {
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.footer-section a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
